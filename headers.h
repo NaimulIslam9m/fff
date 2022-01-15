@@ -2,6 +2,8 @@
 #define HEADERS_H_
 
 #define _LARGEFILE64_SOURCE
+#define _DEFAULT_SOURCE
+
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -11,8 +13,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+#include <errno.h>
 
-int explore(const char *path);
+extern int errno;
+
+int explore(char **words, const int word_cnt);
 int copy(const char *src_path, const char *dst_path);
 int cut(const char *src_path, const char *dst_path);
 int _delete(char *path);

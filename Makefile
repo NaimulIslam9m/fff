@@ -1,5 +1,5 @@
 COM = gcc
-CFLAGS = -Wall -fcommon
+CFLAGS =
 
 all: main_program
 
